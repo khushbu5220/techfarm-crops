@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> {{ title }} </title>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<meta content="" name="description">
+<meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/image/logo.png" rel="icon">
+  <link href="/image/logo.png" rel="apple-touch-icon"> 
+
+
+
+<link rel="stylesheet" type="text/css" href="{{ style }}">
+ 
+
+<!-- ChatBot -->
+<link rel="stylesheet" type="text/css" href="/css/jquery.convform.css">
+<script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.convform.js"></script>
+<script type="text/javascript" src="/js/custom.js"></script>
+
+{{!-- <link href="assets/css/style.css" rel="stylesheet">
+ <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet"> --}}
+ 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+   <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+</head>
+
+
+
+<body>
+    {{{ body }}}
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+
+</body>
+
+</html>

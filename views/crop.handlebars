@@ -1,0 +1,35 @@
+{{> header}}
+
+<div class="banner"
+	style="background-image: url('{{image}}'); height: 80vh; background-size: cover; background-attachment: fixed;"
+	id="home">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<div class="banner_cont">
+					<h2>
+						<center>{{name}} </center>
+					</h2>
+					<p>
+						<center>{{info.0.description}} </center>
+					</p>
+					<a href="./weather/index.html" class="btn1">Weather</a>
+					<a href="http://localhost:3000/" class="btn1" style="margin-left: 10px;">News</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	{{#each info}}
+	<div class="row">
+		<button class="accordion"> {{heading}} </button>
+		<div class="panel">
+			<p>{{description}}</p>
+		</div>
+	</div>
+	{{/each}}
+</div>
+
+{{> footer}}

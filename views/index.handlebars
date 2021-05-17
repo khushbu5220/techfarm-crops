@@ -1,0 +1,245 @@
+
+	<div id="loader" class="center"></div> 
+
+
+{{> header}}
+
+<div class="banner" style="background-image: url('/image/banner.jpg'); background-size: cover; background-attachment: fixed;" id="home">
+	<ul class="socila_links">
+		<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+		<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+		<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+	</ul>	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<div class="banner_cont">
+					<h1>Tech Farms</h1>
+					<h2 style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-weight: 500;">(Crops Production)</h2>
+					<p><center>Once in our life we need a doctor, a lawyer, a policeman and a preacher. But every day, three times, we need a farmer. </center></p>
+				<a href="http://localhost:8000/weather" class="btn1">Weather</a> 
+				<a href="http://localhost:3000/" class="btn1" style="margin-left: 10px;">News</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>		
+
+
+
+
+
+<div class="portfolio-section" id="Crops">
+	
+	<div class="container-fluid">
+		<h2 class="text-center bdr-btm bdr-btm-center">  Crops
+		</h2>
+		<div class="row">
+			<div class="col-md-4">
+			<a href="http://localhost:8000/food_crops"><div class="portfolio-box" style="background-image: url('/image/port1.jpg');">
+					 <h3>Food Crops</h3>	
+					
+				</div> </a>
+				   </div> 
+			<div class="col-md-4">
+				<a href="http://localhost:8000/cash_crops"><div class="portfolio-box" style="background-image: url('/image/port2.png');">
+					<h3>Cash Crops</h3>
+				</div> </a>
+			</div>
+			<div class="col-md-4">
+				<a href="http://localhost:8000/horticulture_crops"><div class="portfolio-box" style="background-image: url('/image/port3.jpg');">
+					<h3>Horticulture Crops</h3>
+				</div>	</a>	
+			</div>
+			<div class="col-md-4">
+				<a href="http://localhost:8000/floral_crops"><div class="portfolio-box" style="background-image: url('/image/port4.jpg');">
+					<h3>Floral Crops</h3>
+				</div>	</a>	
+			</div>
+			<div class="col-md-4">
+				<a href="http://localhost:8000/spices_crops"><div class="portfolio-box" style="background-image: url('/image/port5.jpg');">
+					<h3>Spices Crops</h3>
+				</div>	</a>	
+			</div>
+			<a href="http://localhost:8000/medicinal_crops"><div class="col-md-4">
+				<div class="portfolio-box" style="background-image: url('/image/port6.jpeg');">
+					<h3>Medicinal Crops</h3>
+				</div></a>		
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="contact-section d-md-flex" id="contact">
+  
+  <div class="col-md-6 col-12 contact_section_right d-flex align-items-center">
+    <div class="contact_box">
+      <h2 class="bdr-btm">Get In Touch</h2>
+	  <div class="container register">
+
+            <div class="row" >
+                <div class="col-md-12" >
+                        <div class="form-new" id="home" role="tabpanel" aria-labelledby="home-tab" >
+                            
+                            <div class="row register-form">
+                                <div class="col-md-12">
+                                    <form method="post" autocomplete="off" name="google-sheet">
+                                        <div class="form-group">
+                                            <input type="text" name="Name" class="form-control" placeholder="Your Name *" value="" required=""/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="Email" class="form-control" placeholder="Your Email *" value="" required=""/>
+                                        </div>
+                                        <div id="msg-box" class="form-group">
+                                            <input type="text" name="Message" class="form-control" placeholder="Enter your message *" value="" required=""/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" name="submit" class="btnSubmit btn-block" value="Submit" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+          <script>
+
+		  
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyLINVJhWNz0E4s4fVF7GY3Qxj7-kNmlWr2MTE0rTE_UCgO1KWR/exec'
+            const form = document.forms['google-sheet']
+		  
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                        alert("Thanks for your valuable feedback...")
+                      form.reset();  
+                })
+        
+                .catch(error => console.error('Error!', error.message))
+            })
+					 
+          </script>
+ 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+	  
+    </div>
+  </div>
+  <div class="col-md-6 col-12 contact_section_left">
+    <h2 class="bdr-btm">Contact Us</h2>
+    <div class="contact_box">
+      <i class="fa fa-envelope"></i>
+      <h3>Email :</h3>
+    <p> <a href="mailto:hellofarmers11@gmail.com" style="color: #000;">hellofarmers11@gmail.com</a> </p>
+    </div>
+    <div class="contact_box">
+      <i class="fa fa-map-marker"></i>
+      <h3>Address :</h3>
+      <p>Indira Gandhi Delhi Technical University for Women,<br>Delhi, India</p>
+    </div>
+  </div>
+</div>
+
+<div class="about-section" id="about">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-5 text-justify">
+				<h2 class="bdr-btm">More About Us</h2>
+				<p style="font-size: 20px;"> This website is our major project for final year of Graduation. This is made by Khushbu and Muskan Verma, students of Indira Gandhi Delhi Technical University for Women(IGDTUW) under the supervision of<b> Dr. Maria Jamal (professor of IGDTUW)</b>.</p>
+				<a href="#contact" class="btn1">Contact Us</a>
+			
+      
+	  <div class="col-md">
+	         <div class="image-k">
+				<image src="/image/khushbu.jpg" class="khushbu">
+					<br>
+				<h4 style="padding: 20px;">KHUSHBU</h4><br>
+				<p style="font-size: 15px; text-align: center; margin-top: -50px; margin-left: -20px;">B.Tech. (ECE)<br>4<sup>th</sup> Year Student.<br>Full Stack Developer</p> 
+		 </div>	
+		 
+			 <div class="image-m">
+				<image src="/image/muskan.jpg" class="muskan">
+					<br>
+				<h4 style="padding: 20px;">MUSKAN</h4><br>
+				<p style="font-size: 15px; text-align: center; margin-top: -50px; margin-left: -10px;">B.Tech. (ECE)<br>4<sup>th</sup> Year Student.<br>Web Designer</p> 
+		</div>	
+	</div>
+  </div>
+  
+		
+			<div class="col-md">
+				<div class="about-box">
+					<h3 class="bdr-btm">Education</h3>
+					<ul>
+						<li>Undergraduate students of Indira Gandhi Delhi Technical University for Women(IGDTUW).</li>
+						<li>Studing B.Tech. in Electronics and Communication Engineering(ECE).</li>
+					</ul>
+				</div>
+				
+				<div class="col-md-flex"> 
+				<div class="about-box" style="margin-top: 26px;">
+					<h3 class="bdr-btm">Why to create?</h3>
+				<ul>
+					    <p style="font-size: 15px;">India needs to shift from basic farming to more efficient, sustainable, and productive farming.
+                           <br>This will result in -
+					    <li>Improved productivity and efficiency</li>
+						  <li>The input prices will be less</li>
+<li>Focus on quality or value, instead of quantity</li>
+<li>Organic farming leads to a better quality of food</li>
+						</ul>
+			</div>
+			</div></div>
+			
+			<div class="col-md">
+				<div class="about-box">
+					<h3 class="bdr-btm">Features</h3>
+					<ul>
+						<li>It is an open website for users. Anyone can get information along with the proper links of materials to invest in farming.</li>
+						<li>Flexible for every languages, multi-language feature is provides.</li>
+						<li> It will always have a weather forecasting button on every page for updates of weather according to the Google location (GPS).</li>
+						<li>It has a rating button to keep a check of rates of vegetables in every area.</li>
+						<li>It has the link to various modern farming tools, pesticides, fertilizers and seeds with their specification to buy online.</li>
+						<li>Flexible and responsive website for androids and smart phones.</li>
+						<li>User friendly website and easy to directed.</li>
+					</ul>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+ {{> footer}}
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+
+
+<script type="text/javascript">
+
+document.onreadystatechange = function() { 
+    if (document.readyState !== "complete") { 
+        document.querySelector("body").style.visibility = "hidden"; 
+        document.querySelector("#loader").style.visibility = "visible"; 
+    } else { 
+        document.querySelector("#loader").style.display = "none"; 
+        document.querySelector("body").style.visibility = "visible"; 
+    } 
+}; 
+
+
+	portfolioList = document.querySelectorAll('.portfolio-box');
+	portfolioList.forEach(function(portfolioPic) {
+		portfolioPic.addEventListener('click',function(){
+			bg = this.style.backgroundImage;
+			document.getElementById('port_pop_pic_bg').classList.add("active")
+			document.getElementById('port_pop_pic').style.backgroundImage = bg
+			document.getElementById('port_pop_pic').classList.add("active")
+		});	
+	})
+	document.getElementById('port_pop_pic_bg').addEventListener('click',function(){
+			document.getElementById('port_pop_pic_bg').classList.remove("active")
+			document.getElementById('port_pop_pic').classList.remove("active")
+	})
+</script>

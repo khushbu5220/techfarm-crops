@@ -1,0 +1,30 @@
+{
+  "name": "cropsapi",
+  "version": "1.0.0",
+  "description": "Contains Indian Crops Cultivation Details",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Crops-api"
+  },
+  "author": "Khushbu",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "css": "^3.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.0",
+    "handlebars": "^4.7.7",
+    "hbs": "^4.1.1",
+    "mongoose": "^5.11.15",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7",
+    "schema": "^0.2.1",
+    "validator": "^13.5.2"
+  }
+}
